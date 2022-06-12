@@ -1,24 +1,43 @@
 #!/bin/bash
+
+# Setting timings for the stages.
+# s\dl	sets the lower limit in the for loop
+# s\du	sets the upper limit in the for loop
+# m\d	sets the multiplier for the difference in the two numbers
+
+# Set pause after introduction stage
+
+s0=3
+
+# Set timings for the first stage.
+
+s1l=1
+s1u=30
+m1=0.8
+
+# Introducing the person
 echo "Loading the juping virtual avatar."
+sleep $s0
 
 loadscreen(){
-for i in {1..30}
-do
-	echo "Loading $i %. Sending an alarm from shell."
-	sleep 0.8
-done
+# Stage 1
+	for i in $(seq $s1l $s1u)
+		do
+			echo "Loading $i %. Sending an alarm from shell."
+			sleep $m1
+		done
 
-# 13 seconds
+# Stage 2
 for i in {31..96}
 do
-	echo "Loading $i %. Seating the avatar."
+	echo "Loading $i %. Heating the water."
 	sleep 0.2
 done
 
-# 6 seconds
+# Stage 3
 for i in {97..99}
 do
-	echo "Loading $i %. Checking for errors."
+	echo "Loading $i %. Brewing tea."
 	sleep 3
 done
 }
