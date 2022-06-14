@@ -49,6 +49,7 @@ m6=0.7
 echo "Loading the chanjuping virtual avatar."
 sleep $s0
 
+
 loadscreen(){
 # Stage 1
 for i in $(seq $s1l $s1u)
@@ -91,12 +92,14 @@ for i in $(seq $s6l $s6u)
 		echo "Loading $i %. Drinking tea."
 		sleep $m6
 	done
+
+# Final Stage	
+echo "Loaded 100 %. Attempting to start digital avatar."
+sleep 5
 }
 
 loadscreen
 
-echo "Loaded 100 %. Attempting to start digital avatar."
-sleep 5
 
 echo "Avatar is ready. Press "y" to continue, "x" to exit."
 while :
